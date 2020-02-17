@@ -1,0 +1,13 @@
+#- name: instalação de um servidor web
+#  apt: 
+#  name: apache2
+           
+#          - name: instalação do vim
+#            shell: "apt install vim"
+
+- name: envia um arquivo index.html para o apache
+  template:
+    src: templates/index.html
+    dest: /var/www/html/index.html
+  vars:  
+    sistema: qualquer coisa

@@ -4,9 +4,10 @@
 
   tasks:
 
-          - name: instalação de um servidor web
-            apt: 
-                name: apache2
-           
-          - name: instalação do vim
-            shell: "apt install vim"
+          - name: inclui a role do apache
+            include_role: 
+              name: geerlingguy.apache
+          
+          - name: inclui a role do curso
+            include_role: 
+              name: curso
